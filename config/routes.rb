@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   #root_url needs to be configed
   #root to: "home#index" for example
+
+  resources :posts, only: [:new, :create, :index, :show]
 end
