@@ -7,7 +7,13 @@
         <%= post.title %>
       </a> 
       <div>
-        author: <%= post.user.username %>
+        author: <%= 
+        if user_signed_in?
+          post.user.username
+        else
+          'sign in to view author'
+        end
+        %>
       </div>
     </li>
   <% end %>
