@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   #root to: "home#index" for example
 
   resources :posts, only: [:new, :create, :index, :show]
+  root "posts#index" 
 end
